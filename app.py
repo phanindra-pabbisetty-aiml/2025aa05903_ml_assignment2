@@ -19,8 +19,8 @@ st.markdown("Upload your test data and select a model to evaluate performance.")
 # 2. Load Preprocessing Objects
 @st.cache_resource
 def load_preprocessors():
-    scaler = joblib.load('scaler.joblib')
-    le = joblib.load('label_encoder.joblib')
+    scaler = joblib.load('./models/scaler.joblib')
+    le = joblib.load('./models/label_encoder.joblib')
     return scaler, le
 
 scaler, le = load_preprocessors()
@@ -28,12 +28,12 @@ scaler, le = load_preprocessors()
 # 3. Sidebar - Model Selection
 st.sidebar.header("Configuration")
 model_options = {
-    'Logistic Regression': 'logistic_regression.joblib',
-    'Decision Tree': 'decision_tree.joblib',
-    'K-Nearest Neighbors': 'k-nearest_neighbors.joblib',
-    'Naive Bayes': 'naive_bayes.joblib',
-    'Random Forest': 'random_forest.joblib',
-    'XGBoost': 'xgboost.joblib'
+    'Logistic Regression': './models/logistic_regression.joblib',
+    'Decision Tree': './models/decision_tree.joblib',
+    'K-Nearest Neighbors': './models/k-nearest_neighbors.joblib',
+    'Naive Bayes': './models/naive_bayes.joblib',
+    'Random Forest': './models/random_forest.joblib',
+    'XGBoost': './models/xgboost.joblib'
 }
 selected_model_name = st.sidebar.selectbox("Select Classification Model", list(model_options.keys()))
 
