@@ -46,3 +46,6 @@
 | **Naive Bayes** | Recorded the lowest accuracy of **0.465** and MCC of **0.237**. The strong independence assumption among features likely reduced its effectiveness for this dataset. |
 | **Random Forest (Ensemble)** | This was the best-performing model with an accuracy of **0.669** and the highest MCC of **0.482**. The ensemble of multiple trees effectively reduced variance and captured complex feature interactions. |
 | **XGBoost (Ensemble)** | Achieved strong performance with an accuracy of **0.655** and MCC of **0.466**. Its gradient boosting framework handled non-linear patterns well, making it a close competitor to Random Forest. |
+
+
+Link to the Streamlit app: [Website link](https://2025aa05903mlassignment2.streamlit.app/)
